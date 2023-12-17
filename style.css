@@ -25,7 +25,7 @@
     z-index: 1000;
     /* background-color: rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 20px 60px;
     
 }
 
@@ -47,4 +47,52 @@
     margin-left: 5px;
     background-color: white;
     color: #452c63;
+    cursor: pointer;
+}
+.current-weather{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.icon{
+    font-size: 80px;
+    color: gold;
+    align-items: center;
+}
+.weather-info{
+    color: white;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+hr{
+    font-size: 1px;
+    color: rgba(0,0,0,0.5);
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+.date{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.air-conditions{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+.chances-rain{
+    margin-top: 10px;
+}
+.uv-index{
+    margin-top: 15px;
+}
+
+.air-conditions P{
+    color: rgba(255, 255, 255, 0.5);
+}
+.air-conditions strong{
+    color: white;
+}
+.air-conditions span{
+    font-size: 1.4rem;
 }

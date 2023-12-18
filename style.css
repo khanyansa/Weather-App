@@ -103,3 +103,7 @@ hr{
 .air-conditions span{
     font-size: 1.4rem;
 }
+.copyright{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}

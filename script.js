@@ -5,9 +5,11 @@ function searchInput(event){
     city.innerHTML = `${search.value}`;
     let apiKey = "7d5e465e50dd35604cbo84t0af1a9ca6";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${search.value}&key=${apiKey}`;
+    let forecastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${search.value}&key=${apiKey}`;
 
 
     axios.get(apiUrl).then(displayTemperature);
+    axios.get(forecastApiUrl).then(displayForecast);
 }
 
 function displayTemperature(response){
@@ -41,3 +43,5 @@ let day = currentDate.toLocaleString("default", {weekday: "long"});
 let time = currentDate.toLocaleString("default", {hour: "2-digit", minute: "2-digit", hour12: false})
 let date =document.querySelector("#date");
 date.innerHTML = `${day}, ${time}`;
+
+

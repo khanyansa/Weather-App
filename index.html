@@ -15,39 +15,54 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="box">
-            <form action="" class="form" id="form">
-                <input type="search" placeholder="Enter a city..." class="search" id="search"/>
-                <input type="submit" value="Submit" id="submit" class="submit"/>
-            </form>
-            <div class="current-weather">
-                <div class="weather-info">
-                    <h1 class="city" id="city">Pretoria</h1>
-                    <p class="date" id="date">Sunday, 20:34</p>
-                    <h1 class="temperature" id="temperature"><span class="degrees">31</span>&#176C</h1>
+            <div class="main">
+                <form action="" class="form" id="form">
+                    <input type="search" placeholder="Enter a city..." class="search" id="search" />
+                    <input type="submit" value="Submit" id="submit" class="submit" />
+                </form>
+                <div class="current-weather">
+                    <div class="weather-info">
+                        <h1 class="city" id="city">Pretoria</h1>
+                        <p class="date" id="date">Sunday, 20:34</p>
+                        <h1 class="temperature" id="temperature"><span class="degrees">31</span>&#176C</h1>
+                    </div>
+                    <div class="icons">
+                        <p class="icon" id="icon"><i class="fa-solid fa-sun"></i></p>
+                        <p class="description">light rain</p>
+                    </div>
                 </div>
-                <div class="icons">
-                <p class="icon" id="icon"><i class="fa-solid fa-sun"></i></p>
-                <p class="description">light rain</p>
+                <hr>
+                <div class="air-conditions" id="air-conditions">
+                    <div class="humidity">
+                        <p class="feels-likes" id="feels-like">Feels Like <br> <strong><span id="real-feels">30</span> &#176C</strong>
+                        </p>
+                        <p class="chances-rain">Humidity <br><strong><span id="humidity"> 86</span> %</strong></p>
+                    </div>
+                    <div class="wind-uv">
+                        <p class="wind">Wind Speed <br> <strong><span id="speed">3</span> km/h</strong></p>
+                        <p class="pressure">Pressure <br> <strong><span id="pressure">1029 </span>mBar</strong></p>
+                    </div>
+                
+                </div>
+                <p class="copyright">This project was coded by Nokukhanya and is
+                    <a href="https://github.com/khanyansa/Weather-App.git" target="_blank"> on GitHub</a> and hosted on
+                    <a href="https://hilarious-monstera-e95f6d.netlify.app/" target="_blank"> Netlify</a>
+                </p>
+                </div>
+                <div class="sidebar">
+                    <div class="forecast">
+                        <h2>5-DAY FORECAST</h2>
+                        <div class="forecast-items">
+                            <p class="day">Sun</p>
+                            <p class="condition"><i class="fa-solid fa-cloud"></i> <strong>Cloudy</strong></p>
+                            <p class="temperatures"> <strong>36</strong> / 22 <strong>&#176C</strong></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr>
-            <div class="air-conditions" id="air-conditions">
-                <div class="humidity">
-                    <p class="feels-likes" id="feels-like">Feels Like <br> <strong><span id="real-feels">30</span> &#176C</strong></p>
-                    <p class="chances-rain">Humidity <br><strong><span id="humidity"> 86</span> %</strong></p>
-                </div>
-                <div class="wind-uv">
-                    <p class="wind">Wind Speed <br> <strong><span id="speed">3</span> km/h</strong></p>
-                    <p class="pressure">Pressure <br> <strong><span id="pressure">1029 </span>mBar</strong></p>
-                </div>
-
-            </div>
-            <p class="copyright">This project was coded byNokukhanya and is
-                <a href="https://github.com/khanyansa/Weather-App.git" target="_blank"> on GitHub</a> and hosted on
-                <a href="https://hilarious-monstera-e95f6d.netlify.app/" target="_blank"> Netlify</a>
-            </p>
-        </div>
+            
         
 
     </div>

@@ -26,6 +26,7 @@
     /* background-color: rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(10px);
     padding: 20px 60px;
+    display: flex;
     
 }
 
@@ -78,7 +79,7 @@ hr{
     margin-top: 20px;
 }
 .date{
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .air-conditions{
@@ -95,7 +96,7 @@ hr{
 }
 
 .air-conditions P{
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
 }
 .air-conditions strong{
     color: white;
@@ -105,5 +106,28 @@ hr{
 }
 .copyright{
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+}
+.sidebar{
+    margin-left: 30px;
+    margin-top: 40px;
+    line-height: 2.2;
+    color: white;
+}
+.forecast-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    
+}
+.forecast-items p{
+    padding-right: 25px;
+}
+.condition{
+    color: white;
+}
+.forecast-items strong{
+    color: white;
 }

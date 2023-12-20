@@ -4,12 +4,11 @@ function searchInput(event){
     let city = document.querySelector("#city");
     city.innerHTML = `${search.value}`;
     let apiKey = "7d5e465e50dd35604cbo84t0af1a9ca6";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${search.value}&key=${apiKey}`;
-    let forecastApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${search.value}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${search.value}&key=${apiKey}&units=metric`;
+
 
 
     axios.get(apiUrl).then(displayTemperature);
-    axios.get(forecastApiUrl).then(displayForecast);
 }
 
 function displayTemperature(response){
@@ -32,6 +31,8 @@ function displayTemperature(response){
     description.innerHTML = response.data.condition.description;
     let icon = document.querySelector("#icon");
     icon.innerHTML =`<img src = "${response.data.condition.icon_url}"/>`;
+
+    getForecast(response.data.city);
     
 }
 
@@ -44,4 +45,35 @@ let time = currentDate.toLocaleString("default", {hour: "2-digit", minute: "2-di
 let date =document.querySelector("#date");
 date.innerHTML = `${day}, ${time}`;
 
+
+
+function displayForecast(response){
+    let forecast = document.querySelector("#forecast-container");
+
+    
+    let forecastHtml = "";
+    response.data.daily.forEach(function (day, index){
+        if (index < 4)
+        forecastHtml = forecastHtml +` <p class="day">${formatDay(day.time)}</p>
+                        <p class="conditions"><strong><img src="${day.condition.icon_url}"/></strong></p>
+                        <p class="temperatures"><strong>${Math.round(day.temperature.maximum)} / </strong> ${Math.round(day.temperature.minimum)} <strong>&#176C</strong></p>`;
+
+    });
+    
+    forecast.innerHTML = forecastHtml;
+
+}
+displayForecast();
+
+function formatDay(timeStamp){
+    let date = new Date(timeStamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[date.getDay()];
+}
+
+function getForecast(city){
+    let apiKey =  "7d5e465e50dd35604cbo84t0af1a9ca6";
+    let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(forecastUrl).then(displayForecast);
+}
 
